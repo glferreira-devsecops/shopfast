@@ -1,4 +1,4 @@
-name: Deploy to Production
+name: Deploy
 
 on:
   release:
@@ -6,15 +6,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
-    name: Deploy to Vercel/Netlify
+  build-and-deploy:
+    name: Production Build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js 18
         uses: actions/setup-node@v4
         with:
           node-version: '18'
@@ -29,25 +29,20 @@ jobs:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
 
-      - name: Deploy notification
-        run: echo "🚀 Ready for deployment to your hosting provider"
+      - name: Upload production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-release
+          path: dist/
+          retention-days: 30
 
-      # Uncomment and configure for your hosting provider:
-
-      # For Vercel:
-      # - name: Deploy to Vercel
-      #   uses: amondnet/vercel-action@v25
-      #   with:
-      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
-      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-      #     vercel-args: '--prod'
-
-      # For Netlify:
-      # - name: Deploy to Netlify
-      #   uses: netlify/actions/cli@master
-      #   with:
-      #     args: deploy --prod --dir=dist
-      #   env:
-      #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      - name: Deployment summary
+        run: |
+          echo "✅ Production build completed successfully!"
+          echo "📦 Build size: $(du -sh dist/ | cut -f1)"
+          echo "🚀 Ready for deployment"
+          echo ""
+          echo "Next steps:"
+          echo "- Download artifacts from this workflow"
+          echo "- Deploy to your hosting provider (Vercel, Netlify, etc.)"
+          echo "- Or use automatic deployment (configure secrets for your platform)"
