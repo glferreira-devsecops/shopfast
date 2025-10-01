@@ -24,6 +24,7 @@
 
 import { useState, useCallback } from 'react';
 import { Header } from './components/Header';
+import { PortfolioBanner } from './components/PortfolioBanner';
 import { CategoryFilter } from './components/CategoryFilter';
 import { ProductCard } from './components/ProductCard';
 import { CartDrawer } from './components/CartDrawer';
@@ -150,6 +151,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
+      <PortfolioBanner />
       <Header
         cartItemCount={itemCount}
         onCartClick={() => setIsCartOpen(true)}

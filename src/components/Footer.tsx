@@ -86,10 +86,38 @@ export function Footer() {
             </div>
           </div>
 
+          <div className="mt-8 pt-6 border-t border-gray-100">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6">
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                    📂 Portfolio Case Study
+                  </h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    This project demonstrates advanced full-stack development with 40% performance improvement
+                    through strategic optimization. Built with modern technologies and enterprise-grade
+                    security practices.
+                  </p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs font-medium text-gray-700 mb-1">Open to Opportunities</p>
+                  <a
+                    href="https://www.linkedin.com/in/devferreirag/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                  >
+                    Let's Connect →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center mt-6 text-xs text-gray-500">
             <p>© {new Date().getFullYear()} ShopFast. Plataforma E-commerce de Alta Performance.</p>
             <p className="mt-1">
-              Estudo de caso: Re-arquitetura utilizando Node.js, Redis e otimizações de performance.
+              Professional portfolio project • React + TypeScript + Supabase
             </p>
           </div>
         </div>
