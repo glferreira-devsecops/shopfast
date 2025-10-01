@@ -115,10 +115,19 @@ export function Footer() {
           </div>
 
           <div className="text-center mt-6 text-xs text-gray-500">
-            <p>© {new Date().getFullYear()} ShopFast. Plataforma E-commerce de Alta Performance.</p>
+            <p>© {new Date().getFullYear()} ShopFast. High-Performance E-commerce Platform.</p>
             <p className="mt-1">
-              Professional portfolio project • React + TypeScript + Supabase
+              Built with modern web technologies • Optimized for speed and security
             </p>
+          </div>
+
+          {/* Hidden SEO links - Crawlable but not visible */}
+          <div className="sr-only">
+            <nav aria-label="SEO links">
+              <a href="https://www.linkedin.com/in/devferreirag/">LinkedIn Profile</a>
+              <a href="https://github.com/glferreira-devsecops">GitHub Projects</a>
+              <span>ecommerce platform online shopping buy products electronics fashion home garden sports books secure checkout fast shipping customer reviews best deals discount prices premium quality 24/7 support</span>
+            </nav>
           </div>
         </div>
       </div>

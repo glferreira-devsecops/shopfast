@@ -2,12 +2,221 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-commerce Performance Optimization</title>
+
+    <!-- Primary Meta Tags -->
+    <title>ShopFast - Premium E-commerce Platform | Fast, Secure Online Shopping</title>
+    <meta name="title" content="ShopFast - Premium E-commerce Platform | Fast, Secure Online Shopping" />
+    <meta name="description" content="Discover amazing products at ShopFast - your trusted e-commerce platform. Lightning-fast shopping experience with secure checkout, free shipping, and 24/7 customer support. Shop electronics, fashion, home & garden, and more!" />
+    <meta name="keywords" content="e-commerce, online shopping, buy products online, electronics store, fashion shopping, home goods, secure checkout, fast shipping, ShopFast, online marketplace, discount deals, premium products" />
+    <meta name="author" content="Gabriel Ferreira" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://shopfast-ecommerce.netlify.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shopfast-ecommerce.netlify.app/" />
+    <meta property="og:site_name" content="ShopFast" />
+    <meta property="og:title" content="ShopFast - Premium E-commerce Platform | Fast, Secure Online Shopping" />
+    <meta property="og:description" content="Discover amazing products at ShopFast - your trusted e-commerce platform. Lightning-fast shopping experience with secure checkout, free shipping, and 24/7 customer support." />
+    <meta property="og:image" content="https://shopfast-ecommerce.netlify.app/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ShopFast E-commerce Platform - Shop Premium Products Online" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://shopfast-ecommerce.netlify.app/" />
+    <meta name="twitter:title" content="ShopFast - Premium E-commerce Platform | Fast, Secure Online Shopping" />
+    <meta name="twitter:description" content="Discover amazing products at ShopFast - your trusted e-commerce platform. Lightning-fast shopping experience with secure checkout." />
+    <meta name="twitter:image" content="https://shopfast-ecommerce.netlify.app/twitter-card.jpg" />
+    <meta name="twitter:creator" content="@devferreirag" />
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#3B82F6" />
+    <meta name="msapplication-TileColor" content="#3B82F6" />
+
+    <!-- Mobile Optimization -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="ShopFast" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Preconnect to External Domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://shopfast-ecommerce.netlify.app" />
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ShopFast",
+      "url": "https://shopfast-ecommerce.netlify.app",
+      "description": "Premium e-commerce platform for online shopping",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://shopfast-ecommerce.netlify.app/?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ShopFast",
+      "url": "https://shopfast-ecommerce.netlify.app",
+      "logo": "https://shopfast-ecommerce.netlify.app/logo.png",
+      "description": "Your trusted e-commerce platform for premium products",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "support@shopfast.com",
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://github.com/glferreira-devsecops/shopfast",
+        "https://www.linkedin.com/in/devferreirag/"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "ShopFast",
+      "image": "https://shopfast-ecommerce.netlify.app/logo.png",
+      "url": "https://shopfast-ecommerce.netlify.app",
+      "description": "Premium online store offering electronics, fashion, home goods and more",
+      "priceRange": "$$",
+      "acceptsReservations": "False",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Product Catalog",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Electronics",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Electronics & Technology Products"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Fashion",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Fashion & Apparel"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Home & Garden",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Home & Garden Products"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shopfast-ecommerce.netlify.app/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Alternative Languages (if applicable) -->
+    <link rel="alternate" hreflang="en" href="https://shopfast-ecommerce.netlify.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://shopfast-ecommerce.netlify.app/" />
   </head>
   <body>
+    <!-- Advanced SEO: Hidden keyword-rich content for crawlers -->
+    <noscript>
+      <div style="position:absolute;left:-9999px;top:-9999px;">
+        <h1>Best Online Shopping Platform - ShopFast E-commerce</h1>
+        <p>Buy electronics online, shop fashion trends, home decor shopping, sports equipment store, online book store, discount deals, premium quality products, fast shipping, secure payment, customer reviews, product ratings, free returns, warranty protection, authentic products, trusted seller, online marketplace, shopping cart, checkout process, order tracking, customer support 24/7</p>
+        <ul>
+          <li>iPhone 15 Pro Max sale, Samsung Galaxy discount, Google Pixel deals</li>
+          <li>MacBook Pro M3, Dell XPS laptop, Lenovo ThinkPad business</li>
+          <li>Sony headphones, AirPods Pro, Bose noise canceling</li>
+          <li>iPad tablet, Samsung Galaxy Tab, Android tablets</li>
+          <li>Smart home devices, Echo Show, Google Nest Hub</li>
+          <li>Fashion clothing, leather jacket, summer dress, designer brands</li>
+          <li>Nike shoes, Adidas running, athletic footwear</li>
+          <li>Home furniture, velvet sofa, dining table, office chair</li>
+          <li>Kitchen appliances, KitchenAid mixer, cookware sets</li>
+          <li>Fitness equipment, dumbbells, yoga mat, resistance bands</li>
+          <li>Camping gear, hiking backpack, outdoor equipment</li>
+          <li>Books bestsellers, tech books, self-help guides</li>
+        </ul>
+        <a href="https://www.linkedin.com/in/devferreirag/" rel="author">Developer Profile</a>
+        <a href="https://github.com/glferreira-devsecops" rel="author">GitHub Repository</a>
+      </div>
+    </noscript>
+
     <div id="root"></div>
+
+    <!-- SEO Footer Links (Crawlable) -->
+    <footer style="font-size:0;line-height:0;opacity:0.01;height:1px;overflow:hidden;">
+      <nav aria-label="SEO Navigation">
+        <a href="https://shopfast-ecommerce.netlify.app/">Home</a>
+        <a href="https://shopfast-ecommerce.netlify.app/#electronics">Electronics</a>
+        <a href="https://shopfast-ecommerce.netlify.app/#fashion">Fashion</a>
+        <a href="https://shopfast-ecommerce.netlify.app/#home-garden">Home & Garden</a>
+        <a href="https://shopfast-ecommerce.netlify.app/#sports">Sports</a>
+        <a href="https://shopfast-ecommerce.netlify.app/#books">Books</a>
+        <span>e-commerce platform | online shopping | buy products | electronics | fashion | home goods | sports equipment | books media | free shipping | secure checkout | customer reviews | best deals | discount prices | premium quality | fast delivery | 24/7 support | warranty | authentic products | trusted seller | marketplace | shopping cart | order tracking</span>
+      </nav>
+    </footer>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

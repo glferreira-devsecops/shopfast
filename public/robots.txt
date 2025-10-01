@@ -1,0 +1,57 @@
+# robots.txt for ShopFast E-commerce Platform
+# https://shopfast-ecommerce.netlify.app/robots.txt
+
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Crawl-delay to prevent overloading the server
+Crawl-delay: 1
+
+# Disallow private/admin areas (add as needed)
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /account/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+# Allow specific bots full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://shopfast-ecommerce.netlify.app/sitemap.xml
